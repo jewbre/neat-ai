@@ -6,22 +6,21 @@
 </head>
 <body>
 
-<script src="/neat-ai/js/models/base/Node.js"></script>
-<script src="/neat-ai/js/models/base/Connection.js"></script>
-<script src="/neat-ai/js/models/base/Layer.js"></script>
-<script src="/neat-ai/js/models/InLayer.js"></script>
-<script src="/neat-ai/js/models/OutLayer.js"></script>
-<script src="/neat-ai/js/models/base/Network.js"></script>
-<script src="/neat-ai/js/models/interfaces/Mutation.js"></script>
-<script src="/neat-ai/js/models/mutations/AddConnectionMutation.js"></script>
-<script src="/neat-ai/js/models/mutations/AddNewLayerMutation.js"></script>
-<script src="/neat-ai/js/models/mutations/AddNewNodeMutation.js"></script>
-<script src="/neat-ai/js/models/mutations/RemoveLayerMutation.js"></script>
-<script src="/neat-ai/js/models/mutations/ChangeConnectionWeight.js"></script>
-<script src="/neat-ai/js/models/mutations/ChangeDefaultValueMutation.js"></script>
-<script src="/neat-ai/js/models/factories/MutationFactory.js"></script>
-<script src="/neat-ai/js/models/trainings/SupervisedTraining.js"></script>
+<!-- Helper -->
+<script src="/js/helpers/Map.js"></script>
 
-<script src="/neat-ai/js/main.js"></script>
+<!-- Base models -->
+<script src="/js/base/Node.js"></script>
+<script src="/js/base/Connection.js"></script>
+<script src="/js/base/Layer.js"></script>
+<script src="/js/base/Network.js"></script>
+
+<!-- Builders -->
+<script src="/js/builders/NodeBuilder.js"></script>
+<script src="/js/builders/ConnectionBuilder.js"></script>
+<script src="/js/builders/LayerBuilder.js"></script>
+
+<!-- Runner script -->
+<script src="/js/main.js"></script>
 </body>
 </html>
