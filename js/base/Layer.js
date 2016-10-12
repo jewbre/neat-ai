@@ -74,6 +74,18 @@ class Layer {
         this._network.removeLayer(this);
     }
 
+    /**
+     * @returns {Node|null}
+     */
+    getRandomNode(){
+        let nodes = this._nodes.values();
+        if(nodes.length > 0 ) {
+            let index = Math.floor( Math.random() * nodes.length );
+            return nodes[index];
+        }
+        return null;
+    }
+
     toJson() {
         let nodes = [];
         for(let node of this._nodes) {

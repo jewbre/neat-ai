@@ -8,6 +8,7 @@
 
 <!-- Helper -->
 <script src="/js/helpers/Map.js"></script>
+<script src="/js/helpers/ThresholdFunction.js"></script>
 
 <!-- Base models -->
 <script src="/js/base/Node.js"></script>
@@ -19,6 +20,24 @@
 <script src="/js/builders/NodeBuilder.js"></script>
 <script src="/js/builders/ConnectionBuilder.js"></script>
 <script src="/js/builders/LayerBuilder.js"></script>
+
+<!-- Mutations -->
+<script src="/js/mutations/factory/Mutation.js"></script>
+<script src="/js/mutations/AddConnectedNodeMutation.js"></script>
+<script src="/js/mutations/AddConnectedNodeOnNewLayerMutation.js"></script>
+<script src="/js/mutations/AddConnectionBetweenNodes.js"></script>
+<script src="/js/mutations/BlankMutation.js"></script>
+<script src="/js/mutations/ChangeThresholdFunctionMutation.js"></script>
+<script src="/js/mutations/ChangeThresholdMutation.js"></script>
+<script src="/js/mutations/ChangeWeightMutation.js"></script>
+<script src="/js/mutations/DeactivationMutation.js"></script>
+<script src="/js/mutations/factory/MutationFactory.js"></script>
+
+<!-- Training -->
+<script src="/js/training/base/Training.js"></script>
+
+<div id="results"></div>
+
 
 <!-- Runner script -->
 <script src="/js/main.js"></script>

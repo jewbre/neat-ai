@@ -2,7 +2,7 @@ class Node {
     /**
      * @param id {number}
      * @param threshold {number}
-     * @param thresholdFunction {Function}
+     * @param thresholdFunction {ThresholdFunction}
      */
     constructor(id, threshold, thresholdFunction) {
         this._id = id;
@@ -11,6 +11,7 @@ class Node {
         this._inConnections = new Map();
         this._outConnections = new Map();
         this._layer = null;
+        this._active = true;
 
         this._value = Node.prototype.DEFAULT_VALUE;
     }
@@ -19,14 +20,17 @@ class Node {
         this._value += value;
     }
 
+    deactivate() {
+        this._active = false;
+    }
+
     activate() {
-        if(this._thresholdFunction(this._value) >= this._threshold) {
+        if(this._active && this._thresholdFunction.calculateValue(this._value) >= this._threshold) {
             this.doActivation();
         }
     }
 
     doActivation(){
-        console.log("Activation");
         for(let connection of this._outConnections) {
             connection.activate();
         }
@@ -74,6 +78,26 @@ class Node {
     }
 
     /**
+     * @param diff {number}
+     */
+    updateThreshold(diff) {
+        this._threshold += diff;
+    }
+
+    /**
+     * @param shift {undefined|number}
+     * @param slope {undefined|number}
+     */
+    updateThresholdFunction(shift, slope) {
+        if(typeof shift !== "undefined") {
+            this._thresholdFunction.shift = this._thresholdFunction.shift + shift;
+        }
+
+        if(typeof slope !== "undefined") {
+            this._thresholdFunction.slope = this._thresholdFunction.slope + slope;
+        }
+    }
+    /**
      * @param connection {Connection}
      */
     addInConnection(connection) {
@@ -96,6 +120,31 @@ class Node {
         connections.put(node.id, connection);
     }
 
+    /**
+     *
+     * @returns {Connection|null}
+     */
+    getRandomConnection() {
+        let connections = this._inConnections.values();
+        if(connections.length > 0) {
+            let index = Math.floor( Math.random() * connections.length );
+            return connections[index];
+        }
+
+        return null;
+    }
+
+    hasConnections() {
+        return this._inConnections.values().length > 0;
+    }
+
+    /**
+     * @param node {Node}
+     * @returns {boolean}
+     */
+    hasConnection(node) {
+        return this._outConnections.hasKey(node.id);
+    }
 
     get id() {
         return this._id;
@@ -135,6 +184,7 @@ class Node {
         return {
             id : this._id,
             threshold : this._threshold,
+            thresholdFunction : this._thresholdFunction.toJson(),
             layer : this._layer.id,
             inConnections : inConnections,
             outConnections : outConnections,

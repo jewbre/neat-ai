@@ -30,14 +30,12 @@ class NodeBuilder {
         return 0.5;
     }
     /**
-     * @returns {Function}
+     * @returns {ThresholdFunction}
      * @private
      */
     _getThresholdFunction() {
         let shift = 0.0;
         let slope = -1.0;
-        return function(input) {
-            return 1 / (1 + Math.exp(shift + slope * input));
-        }
+        return new ThresholdFunction(shift, slope);
     }
 }
