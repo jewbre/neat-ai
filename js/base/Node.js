@@ -37,6 +37,7 @@ class Node {
     }
 
     reset() {
+        this._active = true;
         this._value = Node.prototype.DEFAULT_VALUE;
     }
 

@@ -35,7 +35,9 @@
 
 <!-- Training -->
 <script src="/js/training/base/Training.js"></script>
-
+<button id="iterate-10">Iterate for 10</button>
+<button id="iterate-100">Iterate for 100</button>
+<span id="total-iterations">Total iterations: 0</span>
 <div id="results"></div>
 
 

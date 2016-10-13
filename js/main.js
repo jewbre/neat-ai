@@ -22,22 +22,23 @@ var debug = false;
     let l1 = layerBuilder.build();
     let l2 = layerBuilder.build();
 
-    let h1 = layerBuilder.build();
-    let h2 = layerBuilder.build();
+    // let h1 = layerBuilder.build();
+    // let h2 = layerBuilder.build();
+    //
+    // let hn1 = builder.build();
+    // let hn2 = builder.build();
+    // let hn3 = builder.build();
+    // let hn4 = builder.build();
+    // let hn5 = builder.build();
+    // let hn6 = builder.build();
 
-    let hn1 = builder.build();
-    let hn2 = builder.build();
-    let hn3 = builder.build();
-    let hn4 = builder.build();
-    let hn5 = builder.build();
-    let hn6 = builder.build();
-
-    h1.addNode(hn1);
-    h1.addNode(hn2);
-    h1.addNode(hn3);
-    h2.addNode(hn4);
-    h2.addNode(hn5);
-    h2.addNode(hn6);
+    // h1.addNode(hn1);
+    // h1.addNode(hn2);
+    // h1.addNode(hn3);
+    //
+    // h2.addNode(hn4);
+    // h2.addNode(hn5);
+    // h2.addNode(hn6);
 
     l1.addNode(n1);
     l1.addNode(n2);
@@ -56,70 +57,70 @@ var debug = false;
 
     let connectionBuilder = new ConnectionBuilder(ConnectionBuilder.prototype.DEFAULT_INTERVAL);
 
-    connectionBuilder.build(n1, hn1);
-    connectionBuilder.build(n2, hn1);
-    connectionBuilder.build(n3, hn1);
-    connectionBuilder.build(n4, hn1);
-    connectionBuilder.build(n5, hn1);
-    connectionBuilder.build(n6, hn1);
-    connectionBuilder.build(n7, hn1);
-    connectionBuilder.build(n8, hn1);
-    connectionBuilder.build(n9, hn1);
-    connectionBuilder.build(n10, hn1);
-
-    connectionBuilder.build(n1, hn2);
-    connectionBuilder.build(n2, hn2);
-    connectionBuilder.build(n3, hn2);
-    connectionBuilder.build(n4, hn2);
-    connectionBuilder.build(n5, hn2);
-    connectionBuilder.build(n6, hn2);
-    connectionBuilder.build(n7, hn2);
-    connectionBuilder.build(n8, hn2);
-    connectionBuilder.build(n9, hn2);
-    connectionBuilder.build(n10, hn2);
-
-    connectionBuilder.build(n1, hn3);
-    connectionBuilder.build(n2, hn3);
-    connectionBuilder.build(n3, hn3);
-    connectionBuilder.build(n4, hn3);
-    connectionBuilder.build(n5, hn3);
-    connectionBuilder.build(n6, hn3);
-    connectionBuilder.build(n7, hn3);
-    connectionBuilder.build(n8, hn3);
-    connectionBuilder.build(n9, hn3);
-    connectionBuilder.build(n10, hn3);
-
-    connectionBuilder.build(hn1, hn4);
-    connectionBuilder.build(hn1, hn5);
-    connectionBuilder.build(hn1, hn6);
-
-    connectionBuilder.build(hn2, hn4);
-    connectionBuilder.build(hn2, hn5);
-    connectionBuilder.build(hn2, hn6);
-
-    connectionBuilder.build(hn3, hn4);
-    connectionBuilder.build(hn3, hn5);
-    connectionBuilder.build(hn3, hn6);
-
-    connectionBuilder.build(hn4, o1);
-    connectionBuilder.build(hn4, o2);
-    connectionBuilder.build(hn4, o3);
-
-    connectionBuilder.build(hn5, o1);
-    connectionBuilder.build(hn5, o2);
-    connectionBuilder.build(hn5, o3);
-
-    connectionBuilder.build(hn6, o1);
-    connectionBuilder.build(hn6, o2);
-    connectionBuilder.build(hn6, o3);
+    // connectionBuilder.build(n1, hn1);
+    // connectionBuilder.build(n2, hn1);
+    // connectionBuilder.build(n3, hn1);
+    // connectionBuilder.build(n4, hn1);
+    // connectionBuilder.build(n5, hn1);
+    // connectionBuilder.build(n6, hn1);
+    // connectionBuilder.build(n7, hn1);
+    // connectionBuilder.build(n8, hn1);
+    // connectionBuilder.build(n9, hn1);
+    // connectionBuilder.build(n10, hn1);
+    //
+    // connectionBuilder.build(n1, hn2);
+    // connectionBuilder.build(n2, hn2);
+    // connectionBuilder.build(n3, hn2);
+    // connectionBuilder.build(n4, hn2);
+    // connectionBuilder.build(n5, hn2);
+    // connectionBuilder.build(n6, hn2);
+    // connectionBuilder.build(n7, hn2);
+    // connectionBuilder.build(n8, hn2);
+    // connectionBuilder.build(n9, hn2);
+    // connectionBuilder.build(n10, hn2);
+    //
+    // connectionBuilder.build(n1, hn3);
+    // connectionBuilder.build(n2, hn3);
+    // connectionBuilder.build(n3, hn3);
+    // connectionBuilder.build(n4, hn3);
+    // connectionBuilder.build(n5, hn3);
+    // connectionBuilder.build(n6, hn3);
+    // connectionBuilder.build(n7, hn3);
+    // connectionBuilder.build(n8, hn3);
+    // connectionBuilder.build(n9, hn3);
+    // connectionBuilder.build(n10, hn3);
+    //
+    // connectionBuilder.build(hn1, hn4);
+    // connectionBuilder.build(hn1, hn5);
+    // connectionBuilder.build(hn1, hn6);
+    //
+    // connectionBuilder.build(hn2, hn4);
+    // connectionBuilder.build(hn2, hn5);
+    // connectionBuilder.build(hn2, hn6);
+    //
+    // connectionBuilder.build(hn3, hn4);
+    // connectionBuilder.build(hn3, hn5);
+    // connectionBuilder.build(hn3, hn6);
+    //
+    // connectionBuilder.build(hn4, o1);
+    // connectionBuilder.build(hn4, o2);
+    // connectionBuilder.build(hn4, o3);
+    //
+    // connectionBuilder.build(hn5, o1);
+    // connectionBuilder.build(hn5, o2);
+    // connectionBuilder.build(hn5, o3);
+    //
+    // connectionBuilder.build(hn6, o1);
+    // connectionBuilder.build(hn6, o2);
+    // connectionBuilder.build(hn6, o3);
 
 
     let network = new Network();
     network.addInputLayer(l1);
     network.addOutputLayer(l2);
 
-    network.addLayer(h1);
-    network.addOutputLayer(h2);
+    // network.addLayer(h1);
+    // network.addLayer(h2);
 
     network.nodeBuilder = builder;
     network.layerBuilder = layerBuilder;
@@ -143,46 +144,71 @@ var debug = false;
     let training = new Training(network);
     training.trainSet = trainSet;
 
-    let trainedNetwork = training.train(1000);
+    let totalIterations = 0;
 
-    for(let set of trainSet) {
-        let container = document.createElement("div");
-        container.style.border = "2px solid black";
-        container.style.padding = "10px";
-        container.style.margin = "10px";
+    document.getElementById('iterate-10').addEventListener('click', function(){
+        let net = training.train(10);
+        createResults(trainSet, net);
+        updateIterationCounter(10);
 
-        trainedNetwork.reset();
-        trainedNetwork.setInput(set.input);
-        let output = trainedNetwork.calculateOutput();
-        console.log("Expected: " + set.output + ", Calculated: " + output);
+        training.original = net;
+    });
+    document.getElementById('iterate-100').addEventListener('click', function(){
+        let net = training.train(100);
+        createResults(trainSet, net);
+        updateIterationCounter(100);
 
+        training.original = net;
+    });
 
-        for(let i = 0; i < set.output.length; i++) {
-            let element = document.createElement("div");
-            element.style.display = "inline-block";
-            element.style.width = "50px";
-            element.style.height = (set.output[i] * 200 ) + "px";
-            element.style.backgroundColor = "red";
-            element.style.border = "1px solid black";
+    createResults(trainSet, network);
 
-            container.appendChild(element);
-
-            element = document.createElement("div");
-            element.style.display = "inline-block";
-            element.style.width = "50px";
-            element.style.height = (Math.max(0, output[i] * 200 )) + "px";
-            element.style.backgroundColor = "green";
-            element.style.marginRight = "50px";
-            element.style.border = "1px solid black";
-
-            container.appendChild(element);
-        }
-
-        document.getElementById("results").appendChild(container);
+    function updateIterationCounter(amount) {
+        totalIterations += amount;
+        document.getElementById("total-iterations").innerHTML = "Total iterations: " + totalIterations;
     }
 
-    console.log(trainedNetwork.toJson());
+    function createResults(trainSet, network){
+        let resultsContainer = document.getElementById("results");
+        while (resultsContainer.firstChild) {
+            resultsContainer.removeChild(resultsContainer.firstChild);
+        }
 
+        for(let set of trainSet) {
+            let container = document.createElement("div");
+            container.style.border = "2px solid black";
+            container.style.padding = "10px";
+            container.style.margin = "10px";
 
+            network.reset();
+            network.setInput(set.input);
+            let output = network.calculateOutput();
+            console.log("Expected: " + set.output + ", Calculated: " + output);
+
+            for(let i = 0; i < set.output.length; i++) {
+                let element = document.createElement("div");
+                element.style.display = "inline-block";
+                element.style.width = "50px";
+                element.style.height = (set.output[i] * 200 ) + "px";
+                element.style.backgroundColor = "red";
+                element.style.border = "1px solid black";
+
+                container.appendChild(element);
+
+                element = document.createElement("div");
+                element.style.display = "inline-block";
+                element.style.width = "50px";
+                element.style.height = (Math.max(0, output[i] * 200 )) + "px";
+                element.style.backgroundColor = "green";
+                element.style.marginRight = "50px";
+                element.style.border = "1px solid black";
+
+                container.appendChild(element);
+            }
+
+            resultsContainer.appendChild(container);
+        }
+    }
 
 })();
+

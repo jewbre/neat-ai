@@ -14,10 +14,10 @@ class MutationFactory {
 
             AddConnectionBetweenNodes,
 
-            BlankMutation,
+            // BlankMutation,
 
-            // AddConnectedNodeMutation,
-            // AddConnectedNodeOnNewLayerMutation
+            AddConnectedNodeMutation,
+            AddConnectedNodeOnNewLayerMutation
         ];
 
         let index = Math.floor( Math.random() * mutations.length );

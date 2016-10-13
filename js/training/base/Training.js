@@ -13,6 +13,14 @@ class Training {
         this._testSet = null;
     }
 
+    set original(value) {
+        this._original = value;
+    }
+
+    get original() {
+        return this._original;
+    }
+
     train(iterations){
         let topSurvivor = this._original;
         var maxError = Number.MAX_VALUE;
